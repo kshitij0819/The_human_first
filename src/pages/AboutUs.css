@@ -1,0 +1,562 @@
+/* About Us Page - Human First Design System */
+
+.about-us {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ==================== HERO SECTION ==================== */
+
+.about-hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%);
+}
+
+.about-hero__background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Flowing Lines */
+.flowing-lines {
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+}
+
+.flow-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.flow-path {
+  fill: none;
+  stroke: var(--accent-teal);
+  stroke-width: 2;
+  opacity: 0.6;
+}
+
+.flow-path-1 {
+  animation: flowAnimation 8s ease-in-out infinite;
+  stroke: var(--accent-teal);
+}
+
+.flow-path-2 {
+  animation: flowAnimation 10s ease-in-out infinite;
+  animation-delay: 1s;
+  stroke: var(--accent-beige);
+}
+
+.flow-path-3 {
+  animation: flowAnimation 12s ease-in-out infinite;
+  animation-delay: 2s;
+  stroke: var(--accent-teal-light);
+}
+
+/* Connection Nodes */
+.connection-nodes {
+  position: absolute;
+  inset: 0;
+}
+
+.node {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-teal);
+  box-shadow: 0 0 20px var(--accent-teal);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.node-1 {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.node-2 {
+  top: 30%;
+  right: 20%;
+  animation-delay: 0.6s;
+  background: var(--accent-beige);
+  box-shadow: 0 0 20px var(--accent-beige);
+}
+
+.node-3 {
+  bottom: 25%;
+  left: 25%;
+  animation-delay: 1.2s;
+}
+
+.node-4 {
+  bottom: 35%;
+  right: 15%;
+  animation-delay: 1.8s;
+  background: var(--accent-coral);
+  box-shadow: 0 0 20px var(--accent-coral);
+}
+
+.node-5 {
+  top: 50%;
+  left: 50%;
+  animation-delay: 2.4s;
+  background: var(--accent-lavender);
+  box-shadow: 0 0 20px var(--accent-lavender);
+}
+
+/* Hero Content */
+.about-hero__content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 1s ease-out;
+}
+
+.about-hero__title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  letter-spacing: -0.02em;
+}
+
+.about-hero__subtitle {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  color: var(--text-secondary);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ==================== PHILOSOPHY SECTION ==================== */
+
+.about-philosophy {
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background-color: var(--bg-secondary);
+  position: relative;
+}
+
+.about-philosophy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-teal), transparent);
+}
+
+.philosophy-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.philosophy-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-primary);
+}
+
+.philosophy-text {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ==================== CORE POINTS SECTION ==================== */
+
+.about-points {
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.points-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-2xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.point-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.point-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-teal), var(--accent-beige));
+  transform: scaleX(0);
+  transition: transform var(--transition-normal);
+}
+
+.point-card:hover::before {
+  transform: scaleX(1);
+}
+
+.point-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-lg);
+}
+
+.point-card__visual {
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  justify-content: center;
+}
+
+.point-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.icon-circle {
+  fill: none;
+  stroke: var(--accent-teal);
+  stroke-width: 2;
+  opacity: 0.6;
+}
+
+.icon-circle-pulse {
+  animation: circlePulse 2s ease-in-out infinite;
+}
+
+.icon-path {
+  fill: none;
+  stroke: var(--accent-beige);
+  stroke-width: 3;
+}
+
+.icon-path-pulse {
+  animation: pathPulse 2s ease-in-out infinite;
+}
+
+.point-card__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.point-card__description {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  text-align: center;
+  margin: 0;
+}
+
+/* ==================== PROMISE SECTION ==================== */
+
+.about-promise {
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background-color: var(--bg-tertiary);
+  position: relative;
+  overflow: hidden;
+}
+
+.promise-background {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.promise-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(94, 179, 179, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: glowPulse 6s ease-in-out infinite;
+}
+
+.promise-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.promise-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-primary);
+}
+
+.promise-statement {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.promise-text {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.promise-text br {
+  margin-bottom: var(--spacing-sm);
+}
+
+.promise-text strong {
+  color: var(--accent-teal);
+  font-weight: 700;
+  display: inline-block;
+  margin-top: var(--spacing-md);
+}
+
+.promise-cta {
+  margin-top: var(--spacing-2xl);
+}
+
+/* ==================== VALUES VISUALIZATION ==================== */
+
+.about-values-visual {
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background: linear-gradient(180deg, var(--bg-tertiary) 0%, var(--bg-primary) 100%);
+}
+
+.values-visual-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.values-visual-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+  color: var(--text-primary);
+}
+
+.connection-visual {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-2xl) 0;
+}
+
+.connection-svg {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.central-node {
+  fill: var(--accent-teal);
+  stroke: var(--accent-teal-light);
+  stroke-width: 2;
+  animation: centralPulse 3s ease-in-out infinite;
+}
+
+.outer-node {
+  fill: var(--bg-elevated);
+  stroke: var(--accent-beige);
+  stroke-width: 2;
+  transition: all var(--transition-normal);
+}
+
+.outer-node:hover {
+  fill: var(--accent-beige);
+  filter: drop-shadow(0 0 10px var(--accent-beige));
+}
+
+.connection-line {
+  stroke: var(--accent-teal);
+  stroke-width: 2;
+  opacity: 0.4;
+  animation: lineGlow 4s ease-in-out infinite;
+}
+
+.connection-line-subtle {
+  stroke: var(--accent-beige);
+  opacity: 0.2;
+  stroke-dasharray: 5, 5;
+}
+
+.node-text {
+  fill: var(--bg-primary);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-heading);
+}
+
+.node-text-small {
+  fill: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font-primary);
+}
+
+/* ==================== ANIMATIONS ==================== */
+
+@keyframes flowAnimation {
+  0%, 100% {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    opacity: 0.6;
+  }
+  50% {
+    stroke-dashoffset: 500;
+    opacity: 0.3;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+}
+
+@keyframes circlePulse {
+  0%, 100% {
+    opacity: 0.6;
+    stroke-width: 2;
+  }
+  50% {
+    opacity: 1;
+    stroke-width: 3;
+  }
+}
+
+@keyframes pathPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.7;
+  }
+}
+
+@keyframes centralPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes lineGlow {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+  .about-hero {
+    min-height: 60vh;
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .about-philosophy {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .about-points {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .points-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .about-promise {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .promise-text {
+    font-size: 1.25rem;
+  }
+
+  .about-values-visual {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .connection-svg {
+    max-width: 100%;
+  }
+
+  .node-text {
+    font-size: 12px;
+  }
+
+  .node-text-small {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .point-card {
+    padding: var(--spacing-xl);
+  }
+
+  .point-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .promise-glow {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .flow-path,
+  .node,
+  .icon-circle-pulse,
+  .icon-path-pulse,
+  .promise-glow,
+  .central-node,
+  .connection-line {
+    animation: none;
+  }
+}

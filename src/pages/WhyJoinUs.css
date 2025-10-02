@@ -1,0 +1,229 @@
+/* Why Join Us Page - Human First Design System */
+
+.why-join {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.why-hero {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.why-hero__title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.why-hero__subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Benefits Section */
+.why-benefits {
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background-color: var(--bg-secondary);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-2xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  padding: var(--spacing-2xl);
+  transition: all var(--transition-normal);
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(94, 179, 179, 0.2);
+}
+
+.benefit-icon {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-lg);
+  display: block;
+  text-align: center;
+  filter: drop-shadow(0 0 15px currentColor);
+}
+
+.benefit-icon--green {
+  color: #6eb89f;
+  filter: drop-shadow(0 0 15px #6eb89f);
+}
+
+.benefit-icon--golden {
+  color: #d4b896;
+  filter: drop-shadow(0 0 15px #d4b896);
+}
+
+.benefit-icon--teal {
+  color: var(--accent-teal);
+  filter: drop-shadow(0 0 15px var(--accent-teal));
+}
+
+.benefit-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.benefit-description {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.benefit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefit-list li {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  padding-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+}
+
+.benefit-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-teal);
+  font-weight: 700;
+}
+
+/* Testimonial Section */
+.why-testimonial {
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background: linear-gradient(135deg, rgba(94, 179, 179, 0.05) 0%, rgba(212, 197, 176, 0.05) 100%);
+  position: relative;
+}
+
+.testimonial-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial-quote {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  line-height: 1.8;
+  color: var(--text-primary);
+  font-style: italic;
+  margin: 0 0 var(--spacing-lg) 0;
+  position: relative;
+  padding: var(--spacing-xl);
+}
+
+.testimonial-quote::before {
+  content: '"';
+  font-size: 4rem;
+  color: var(--accent-teal);
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 1;
+}
+
+.testimonial-author {
+  font-size: 1.125rem;
+  color: var(--accent-beige);
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* CTA Section */
+.why-cta {
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background-color: var(--bg-tertiary);
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.2;
+}
+
+.cta-text {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-2xl);
+  line-height: 1.6;
+}
+
+/* Glowing Button Effect */
+.glow-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+
+.glow-button:hover::before {
+  transform: translateX(100%);
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 30px rgba(94, 179, 179, 0.5), var(--shadow-md);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .why-hero {
+    min-height: 40vh;
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .why-benefits {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .why-testimonial {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .why-cta {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+}

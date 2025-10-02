@@ -1,0 +1,204 @@
+/* Get Involved Page - Human First Design System */
+
+.get-involved {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+}
+
+/* Hero Section */
+.involved-hero {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.involved-hero__title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.involved-hero__subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Ways to Join Section */
+.involved-ways {
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background-color: var(--bg-secondary);
+}
+
+.ways-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-2xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.way-card {
+  padding: var(--spacing-2xl);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.way-card__icon {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  filter: drop-shadow(0 0 15px currentColor);
+}
+
+.way-card__title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.way-card__description {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+}
+
+.way-card__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-2xl) 0;
+  flex-grow: 1;
+}
+
+.way-card__benefits li {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  padding-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  position: relative;
+}
+
+.way-card__benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-teal);
+  font-weight: 700;
+}
+
+.way-card__cta {
+  text-align: center;
+}
+
+/* Glowing Button Effects */
+.glow-button-teal {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-button-teal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+
+.glow-button-teal:hover::before {
+  transform: translateX(100%);
+}
+
+.glow-button-teal:hover {
+  box-shadow: 0 0 40px rgba(94, 179, 179, 0.6), var(--shadow-md);
+}
+
+.glow-button-beige:hover {
+  box-shadow: 0 0 40px rgba(212, 197, 176, 0.5), var(--shadow-md);
+}
+
+/* Final CTA Section */
+.involved-final-cta {
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background: linear-gradient(135deg, rgba(94, 179, 179, 0.08) 0%, rgba(212, 197, 176, 0.08) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.involved-final-cta::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(94, 179, 179, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: glowPulse 6s ease-in-out infinite;
+}
+
+.final-cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.final-cta__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.2;
+}
+
+.final-cta__text {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-2xl);
+  line-height: 1.6;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.7;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .involved-hero {
+    min-height: 40vh;
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .involved-ways {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .ways-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .involved-final-cta {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+}

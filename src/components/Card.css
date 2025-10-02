@@ -1,0 +1,50 @@
+/* Card Component - Human First Design System */
+
+.card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.card:hover {
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Card Variants */
+.card--elevated {
+  background-color: var(--bg-elevated);
+  box-shadow: var(--shadow-md);
+}
+
+.card--elevated:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.card--glass {
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-medium);
+}
+
+.card--accent {
+  border-color: var(--accent-teal);
+  background: linear-gradient(135deg, rgba(94, 179, 179, 0.05), rgba(212, 197, 176, 0.05));
+}
+
+.card--accent:hover {
+  border-color: var(--accent-teal-light);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    padding: var(--spacing-lg);
+  }
+}

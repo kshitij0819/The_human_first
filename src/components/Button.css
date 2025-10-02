@@ -1,0 +1,99 @@
+/* Button Component - Human First Design System */
+
+.btn {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  border-radius: var(--radius-lg);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Button Sizes */
+.btn--small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn--medium {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.btn--large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Button Variants */
+.btn--primary {
+  background-color: var(--accent-teal);
+  color: var(--bg-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--primary:hover:not(:disabled) {
+  background-color: var(--accent-teal-light);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-1px);
+}
+
+.btn--secondary {
+  background-color: transparent;
+  border-color: var(--border-medium);
+  color: var(--text-primary);
+}
+
+.btn--secondary:hover:not(:disabled) {
+  background-color: var(--bg-elevated);
+  border-color: var(--accent-teal);
+}
+
+.btn--beige {
+  background-color: var(--accent-beige);
+  color: var(--bg-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--beige:hover:not(:disabled) {
+  background-color: var(--accent-beige-light);
+  box-shadow: 0 0 20px rgba(212, 197, 176, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn--ghost {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--text-primary);
+}
+
+.btn--ghost:hover:not(:disabled) {
+  background-color: var(--bg-elevated);
+}
+
+/* Button States */
+.btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent-teal);
+  outline-offset: 2px;
+}
+
+/* Full Width */
+.btn--full {
+  width: 100%;
+}
