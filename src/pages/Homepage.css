@@ -25,18 +25,20 @@
   pointer-events: none;
 }
 
-/* Subtle Grid Pattern */
+/* Subtle Connection Pattern - Representing Human Bonds */
 .hero-pattern {
   position: absolute;
   inset: 0;
   background-image: 
     linear-gradient(rgba(94, 179, 179, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(94, 179, 179, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
-  opacity: 0.5;
+    linear-gradient(90deg, rgba(94, 179, 179, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 25% 25%, rgba(94, 179, 179, 0.02) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(212, 197, 176, 0.02) 2px, transparent 2px);
+  background-size: 50px 50px, 50px 50px, 100px 100px, 100px 100px;
+  opacity: 0.6;
 }
 
-/* Glowing Orbs */
+/* Enhanced Glowing Orbs with Human Connection Theme */
 .hero-glow {
   position: absolute;
   border-radius: 50%;
@@ -63,33 +65,35 @@
   animation-delay: 2s;
 }
 
-/* Human Silhouettes */
+/* Human Silhouettes - Professional Design */
 .hero-silhouette {
   position: absolute;
-  opacity: 0.08;
+  opacity: 0.12;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  filter: blur(1px);
+  filter: blur(0.5px) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
 }
 
 .hero-silhouette--1 {
-  top: 10%;
-  right: 5%;
-  width: 300px;
-  height: 400px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 300'%3E%3Cpath d='M100 50 C100 30, 85 20, 85 40 C85 35, 80 30, 75 35 C70 25, 60 30, 65 45 L65 80 C50 85, 40 100, 40 120 L40 200 C40 220, 50 240, 60 250 L60 290 L80 290 L80 250 L85 250 L85 290 L95 290 L95 250 L100 250 L100 290 L115 290 L115 250 L120 250 L120 290 L140 290 L140 250 C150 240, 160 220, 160 200 L160 120 C160 100, 150 85, 135 80 L135 45 C140 30, 130 25, 125 35 C120 30, 115 35, 115 40 C115 20, 100 30, 100 50 Z' fill='%235eb3b3'/%3E%3C/svg%3E");
+  top: 8%;
+  right: 3%;
+  width: 320px;
+  height: 420px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Cdefs%3E%3ClinearGradient id='silhouette1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%235eb3b3;stop-opacity:0.9'/%3E%3Cstop offset='50%25' style='stop-color:%235eb3b3;stop-opacity:0.7'/%3E%3Cstop offset='100%25' style='stop-color:%235eb3b3;stop-opacity:0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M150 60 C150 35, 130 20, 130 45 C130 40, 125 35, 120 40 C115 30, 105 35, 110 50 L110 90 C95 95, 85 110, 85 130 L85 220 C85 240, 92 255, 102 265 L102 310 L118 310 L118 270 L125 270 L125 310 L135 310 L135 270 L145 270 L145 310 L165 310 L165 270 L175 270 L175 310 L190 310 L190 265 C200 255, 215 240, 215 220 L215 130 C215 110, 205 95, 190 90 L190 50 C195 35, 185 30, 180 40 C175 35, 170 40, 170 45 C170 20, 150 35, 150 60 Z M150 320 C140 320, 135 325, 135 335 C135 345, 140 350, 150 350 C160 350, 165 345, 165 335 C165 325, 160 320, 150 320 Z' fill='url(%23silhouette1)'/%3E%3C/svg%3E");
   animation: float 12s ease-in-out infinite;
+  transform-origin: center;
 }
 
 .hero-silhouette--2 {
-  bottom: 15%;
-  left: 8%;
-  width: 250px;
-  height: 350px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 300'%3E%3Cpath d='M100 40 C110 25, 95 15, 90 30 C88 25, 82 22, 78 28 C72 20, 65 25, 68 38 L68 75 C55 82, 45 95, 45 115 L45 190 C45 210, 52 225, 62 235 L62 285 L78 285 L78 240 L82 240 L82 285 L92 285 L92 240 L98 240 L98 285 L108 285 L108 240 L118 240 L118 285 L138 285 L138 235 C148 225, 155 210, 155 190 L155 115 C155 95, 145 82, 132 75 L132 38 C135 25, 128 20, 122 28 C118 22, 112 25, 110 30 C105 15, 90 25, 100 40 Z' fill='%23d4c5b0'/%3E%3C/svg%3E");
+  bottom: 12%;
+  left: 5%;
+  width: 280px;
+  height: 380px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Cdefs%3E%3ClinearGradient id='silhouette2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23d4c5b0;stop-opacity:0.8'/%3E%3Cstop offset='50%25' style='stop-color:%23d4c5b0;stop-opacity:0.6'/%3E%3Cstop offset='100%25' style='stop-color:%23d4c5b0;stop-opacity:0.4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M150 50 C160 30, 140 15, 135 35 C133 28, 125 25, 120 32 C115 22, 105 28, 110 42 L110 85 C92 92, 80 108, 80 130 L80 210 C80 230, 88 248, 100 260 L100 305 L120 305 L120 265 L128 265 L128 305 L140 305 L140 265 L152 265 L152 305 L172 305 L172 265 L180 265 L180 305 L200 305 L200 260 C212 248, 220 230, 220 210 L220 130 C220 108, 208 92, 190 85 L190 42 C195 28, 185 22, 180 32 C175 25, 167 28, 165 35 C160 15, 140 30, 150 50 Z M150 315 C140 315, 135 322, 135 332 C135 342, 140 347, 150 347 C160 347, 165 342, 165 332 C165 322, 160 315, 150 315 Z' fill='url(%23silhouette2)'/%3E%3C/svg%3E");
   animation: float 15s ease-in-out infinite;
   animation-delay: 3s;
+  transform-origin: center;
 }
 
 /* Hero Content */

@@ -41,7 +41,14 @@
   color: #0a0a0a;
 }
 
-.light .theme-toggle:hover {
+/* Dark theme specific styles */
+.dark .theme-toggle {
+  background-color: #ffffff;
+  border-color: rgba(212, 175, 55, 0.2);
+  color: #0a0a0a;
+}
+
+.dark .theme-toggle:hover {
   background-color: rgba(212, 175, 55, 0.05);
   border-color: var(--accent-primary);
 }
